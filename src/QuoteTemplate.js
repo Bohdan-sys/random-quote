@@ -31,8 +31,8 @@ const QuoteTemplate = () => {
 
     return (
         <div className='App' style={{ backgroundColor: color, transition: '.5s' }}>
-            <div className='quote quote-sm'>
-                <div className='quote__text'>
+            <div className='quote quote-sm ' id="quote-box">
+                <div className='quote__text' id="text">
                     <h1 className='caption caption--size_3 caption--bold caption--align_center' style={{ color: color }}>
                         <FontAwesomeIcon icon={['fas', 'quote-left']} className="icon icon-quote" style={{ color: color }} />
                         {error ? 'Error'
@@ -40,19 +40,19 @@ const QuoteTemplate = () => {
                                 : citate ? citate.quote : 'Error'}
                     </h1>
                 </div>
-                <div className='quote__author'>
+                <div className='quote__author' id="author">
                     <h1 className='caption caption--size_5 caption--align_end' style={{ color: color }}> -{citate ? citate.author : '----'}</h1>
                 </div>
                 <div className='quote__buttons'>
                     <div className='links'>
-                        <a href='https://twitter.com/intent/tweet' target='_blank' rel="noreferrer">
+                        <a href='https://twitter.com/intent/tweet' target='_blank' rel="noreferrer" id="tweet-quote">
                             <FontAwesomeIcon icon={['fab', 'twitter-square']} className="icon icon-twitter" style={{ color: color }} />
                         </a>
                         <a href='https://www.tumblr.com/' target='_blank' rel="noreferrer">
                             <FontAwesomeIcon icon={['fab', 'tumblr-square']} className="icon icon-tumblr" style={{ color: color }} />
                         </a>
                     </div>
-                    <button className='button'
+                    <button className='button' id="new-quote"
                         onClick={() => { random() }}
                         style={{ backgroundColor: color, transition: '.5s' }}>
                         <span className='caption caption--color_white caption--size_6'>New quote</span>
