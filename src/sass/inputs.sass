@@ -1,0 +1,100 @@
+// @keyframes fadeOut
+//     from
+//     opacity: 1
+
+//     to
+//     opacity: 0
+
+// .just-validate-tooltip-container
+//     position: relative
+
+// .just-validate-tooltip-hide
+//     animation: .5s linear
+//     opacity: 0
+
+// .js-validate-error-label
+//     position: absolute
+//     bottom: -28px
+//     left: 0
+//     z-index: 0
+//     background: #000000da
+//     border-radius: 4px
+//     padding: 4px 8px
+//     font-size: 16px
+//     pointer-events: none
+//     transition: all .4s linear
+
+// .js-validate-error-field
+//     border-radius: 4px
+
+.form
+    &__
+        &input
+            width: 100%
+            height: 38px
+            padding: 6px 12px
+            margin-bottom: 8px 
+            border-radius: 4px
+            font-size: 16px
+            color: #495057
+            border: 1px solid #ccc
+            &.is-active
+                padding-right: 36px
+                transition: .5s
+                
+                
+
+        &textarea
+            @extend .form__input
+            resize: vertical
+            min-height: 120px
+
+                
+        &select
+            @extend .form__input
+        &radio
+            width: 20px
+            height: 20px
+            margin-right: 8px
+            margin-top: 8px
+            
+        &checkbox
+            @extend .form__radio   
+
+            
+        &label
+            color: #505050
+            font-size: 20px 
+            line-height: 1.5
+            
+
+            
+
+
+//validator style
+
+.alert
+    color: #CE5454
+    margin-top: -16px
+.bad 
+    textarea, input
+        border: 1px solid #CE5454
+
+.field
+    padding-bottom: 20px     
+
+//icons
+.icon
+    position: absolute
+    top: 0
+    right: 0
+    font-size: 24px
+    margin: 8px
+    transform: scale(0)
+    transition: .5s
+
+    
+    
+    &.is-active
+        transform: scale(1)
+        transition: .5s
